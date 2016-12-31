@@ -6,4 +6,4 @@
  * Time: 12:56 PM
  */
 ?>
-<h1>SISTEM PENUNJANG KEPUTUSAN | <strong>Pemilihan Ketua Osis SMK Adi Sanggoro</strong></h1>
+<h1>SISTEM PENUNJANG KEPUTUSAN | <strong>Pemilihan Ketua OSIS SMK Adi Sanggoro</strong></h1>

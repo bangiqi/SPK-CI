@@ -24,7 +24,7 @@
         <tr>
             <td>
 
-                <input type="text" id="fname" name="firstname">
+                <input type="text" id="fname" name="firstname" value="rajin">
             </td>
             <td>
                 <select name="cars">
@@ -34,15 +34,15 @@
                     <option value="fiat">3. Elemen yang satu sedikit lebih penting dari pada elemen yang lain
                     </option>
                     <option value="audi">4. Nilai-nilai antara dua nilai perbandingan berdekatan</option>
-                    <option value="audi">5. Nilai-nilai antara dua nilai perbandingan berdekatan</option>
+                    <option value="audi">5. Elemen yang satu sedikit lebih cukup penting dari pada elemen yang lainnya</option>
                     <option value="audi">6. Nilai-nilai antara dua nilai perbandingan berdekatan</option>
-                    <option value="audi">7. Nilai-nilai antara dua nilai perbandingan berdekatan</option>
+                    <option value="audi">7. Satu elemen jelas lebih penting dari pada elemen lainnya</option>
                     <option value="audi">8. Nilai-nilai antara dua nilai perbandingan berdekatan</option>
-                    <option value="audi">9. Nilai-nilai antara dua nilai perbandingan berdekatan</option>
+                    <option value="audi">9. Satu elemen mutlak penting dari pada elemen lainnya</option>
                 </select>
             </td>
             <td>
-                <input type="text" id="fname" name="firstname">
+                <input type="text" id="fname" name="firstname" value="displin">
             </td>
         </tr>
 
@@ -51,4 +51,6 @@
     ?>
 
 </table>
+
+<div><button class="button">Take Survey</button></div>
 

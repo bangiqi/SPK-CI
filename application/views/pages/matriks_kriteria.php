@@ -13,7 +13,6 @@
 
 ?>
 
-<h2>Data Matriks Hasil Kriteria | <a href="#">Tambah</a></h2>
 
 <?php
 //var_dump($dataku);
@@ -24,17 +23,45 @@ $ri=Array(0,0,0,0.58,0.9,1.12,1.24,1.32,1.41,1.45,1.49);
 $a=array();
 $d=array();
 
-foreach($dataku as $dt){
+function logArray($d){
+    echo "<pre>";
+    //print_r($d);
+    var_dump($d);
+    echo "</pre>";
+}
 
-    $idx1=$a[]=str_replace(" ","_",$dt[0]);
-    $idx2=$a[]=str_replace(" ","_",$dt[1]);
+if (is_null($test_obj)){
+    //redirect('http://localhost/spk_osis/index.php/admin/add_question');
+    echo ("<SCRIPT LANGUAGE='JavaScript'>
+    window.alert('Maaf anda harus mengisi quisioner terlebih dahulu')
+    window.location.href='http://localhost/spk_osis/index.php/admin/add_question';
+    </SCRIPT>");
+    redirect('http://localhost/spk_osis/index.php/admin/add_question');
+}
+
+foreach ($test_obj as $key => $value){
+
+    //var_dump($value->kriteria_1);
+    //var_dump($value->kriteria_2);
+
+    $idx1=$a[]=str_replace(" ","_",$value->kriteria_1);
+    $idx2=$a[]=str_replace(" ","_",$value->kriteria_2);
 
     if(!isset($d[$idx1])){$d[$idx1]=array();$d[$idx1][$idx1]=1;}
     if(!isset($d[$idx2])){$d[$idx2]=array();$d[$idx2][$idx2]=1;}
 
-    $d[$idx1][$idx2]=$dt[2];
-    $d[$idx2][$idx1]=1/$dt[2];
+    $d[$idx1][$idx2]=$value->value_mtx;
+    $d[$idx2][$idx1]=1/$value->value_mtx;
 }
+
+/*foreach($test_obj as $dt => $value){
+
+    //echo "cek $dt : ".$dt[0];
+    //logArray($dt->kriteria_2);
+    //var_dump($value->kriteria_2);
+
+
+}*/
 
 $a=array_unique($a);
 
@@ -42,8 +69,21 @@ $b=array();
 
 foreach($a as $v) $b[]=$v;
 
-//echo "Criteria:\n";print_r($a);
-//echo "Comparison data:\n";print_r($d);
+//echo "Criteria:\n";
+
+//print_r($a);
+
+?>
+
+
+<h2>Data Matriks Hasil Kriteria </h2>
+
+<?php
+
+echo "<br><h3>Comparison data:</h3>\n";
+echo "<pre>";
+//print_r($d);
+echo "</pre>";
 
 $a=$b;
 $n=count($a);
@@ -78,7 +118,7 @@ for($i=0;$i<=$n;$i++){
 
     if($i>0){
 
-        $rows[$i-1]/=$n;echo "<td>".number_format((float)$rows[$i-1], 2, '.', '')."</td>";
+        $rows[$i-1]/=$n;echo "<td>".number_format((float)$rows[$i-1], 4, '.', '')."</td>";
 
     }else{
 
@@ -98,21 +138,53 @@ $cr=$ci/$ri[$n];
 
 echo "<table>\n<pre>";
 
-echo "Total:\n";
+//echo "Total:\n";
 
 //print_r($columns);
 
-echo "Priority Vector:\n";
+//echo "Priority Vector:\n";
 
 //print_r($rows);
 
 echo "</pre>";
 
-echo "Principal Eigen Value (&#955;<sub>max</sub>)=$p<br />\n"
+/*echo "Principal Eigen Value (&#955;<sub>max</sub>)=$p<br />\n"
     ."Consistency Index (CI) =$ci<br/>\n"
     ."Random Index (RI)=".$ri[$n]."<br />\n"
-    ."Consistency Ratio (CR)=<span".($cr>0.1?' style="color:red"':'').">$cr</span>";
+    ."Consistency Ratio (CR)=<span".($cr>0.1?' style="color:red"':'').">$cr</span>";*/
 
 ?>
+<h3>Result :</h3>
+<table>
+    <tr>
+        <th colspan="3">Calculation</th>
+    </tr>
+
+    <tr>
+        <td width="200">Principal Eigen Value (&#955;<sub>max</sub>)</td>
+        <td width="10">: </td>
+        <td style="text-align: left;"><div style="color: forestgreen; font-weight: bolder;"><?php echo $p; ?></div></td>
+    </tr>
+
+    <tr>
+        <td width="200">Consistency Index (CI) </td>
+        <td width="10">: </td>
+        <td style="text-align: left;"><div style="color: forestgreen; font-weight: bolder;"><?php echo $ci; ?></div></td>
+    </tr>
+
+    <tr>
+        <td width="200">Random Index (RI) </td>
+        <td width="10">: </td>
+        <td style="text-align: left;"><div style="color: forestgreen; font-weight: bolder;"><?php echo $ri[$n]; ?></div></td>
+    </tr>
+
+    <tr>
+        <td width="200">Consistency Ratio (CR) </td>
+        <td width="10">: </td>
+        <td style="text-align: left;"><div style="color: forestgreen; font-weight: bolder;"><?php echo "<span".($cr>0.1?' style="color:red"':'').">".$cr."</span>"; ?></div></td>
+    </tr>
+
+
+</table>
 
 

@@ -15,32 +15,37 @@
         <th>Nama Kriteria</th>
         <th>Aksi</th>
     </tr>
+
+
     <tr>
-        <td>A001</td>
-        <td>Rajin</td>
+        <td>U001</td>
+        <td>Kevin Hermawan</td>
         <td>
             <a href="#">Edit</a>
             |
             <a href="#">Hapus</a>
         </td>
     </tr>
+
     <tr>
-        <td>A001</td>
-        <td>Disiplin</td>
+        <td>U002</td>
+        <td>Dicky Perdian</td>
         <td>
             <a href="#">Edit</a>
             |
             <a href="#">Hapus</a>
         </td>
     </tr>
+
     <tr>
-        <td>A001</td>
-        <td>Cerdas</td>
+        <td>U003</td>
+        <td>Sandy Sulthan</td>
         <td>
             <a href="#">Edit</a>
             |
             <a href="#">Hapus</a>
         </td>
     </tr>
+
 
 </table>

@@ -10,17 +10,35 @@
 <?php
 //var_dump($dataku);
 ?>
+
+
 <table>
     <tr>
         <th>Kode</th>
         <th>Nama Kriteria</th>
         <th>Aksi</th>
     </tr>
-
-
     <tr>
-        <td>Peter</td>
-        <td>Griffin</td>
+        <td>A001</td>
+        <td>Rajin</td>
+        <td>
+            <a href="#">Edit</a>
+            |
+            <a href="#">Hapus</a>
+        </td>
+    </tr>
+    <tr>
+        <td>A002</td>
+        <td>Disiplin</td>
+        <td>
+            <a href="#">Edit</a>
+            |
+            <a href="#">Hapus</a>
+        </td>
+    </tr>
+    <tr>
+        <td>A003</td>
+        <td>Cerdas</td>
         <td>
             <a href="#">Edit</a>
             |
@@ -29,3 +47,5 @@
     </tr>
 
 </table>
+
+

@@ -136,6 +136,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         box-sizing: border-box;
     }
 
+    input[type=radio]{
+        width: 96px;
+        height: 96px;
+    }
+    .kanan{
+        text-align: center;
+    }
+
     input[type=submit] {
         width: 100%;
         background-color: #4CAF50;

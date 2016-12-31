@@ -10,11 +10,16 @@
 
 <ul>
     <li><a class="active" href="#home">Home</a></li>
-    <li><a href="./kriteria">Kriteria</a></li>
-    <li><a href="./alternatif">Alternatif</a></li>
-    <li><a href="./calc_kriteria">Kuisioner Kriteria</a></li>
-    <li><a href="./matriks_kriteria">Matriks Kriteria</a></li>
-    <li><a href="./calc_kriteria">Kuisioner Alternatif</a></li>
-    <li><a href="./matriks_kriteria">Matriks Alternatif</a></li>
-    <li><a href="./">Prioritas Alternatif</a></li>
+    <li><a href="<?php echo base_url(); ?>admin/kriteria">Kriteria</a></li>
+    <li><a href="<?php echo base_url(); ?>admin/alternatif">Alternatif</a></li>
+    <li><a href="<?php echo base_url(); ?>admin/add_question">Kuisioner Kriteria</a></li>
+    <li><a href="<?php echo base_url(); ?>admin/matriks_kriteria">Matriks Kriteria</a></li>
+    <li><a href="<?php echo base_url(); ?>admin/add_question_alternatif">Kuisioner Alternatif</a></li>
+    <li><a href="<?php echo base_url(); ?>admin/matriks_alternatif">Matriks Alternatif</a></li>
+    <li><a href="<?php echo base_url(); ?>admin/choose">Your Decision</a></li>
+
+
+    <!--<li><a href="<?php /*echo base_url(); */?>admin/calc_kriteria">Kuisioner Alternatif</a></li>
+    <li><a href="<?php /*echo base_url(); */?>admin/matriks_kriteria">Matriks Alternatif</a></li>
+    <li><a href="#">Prioritas Alternatif</a></li>-->
 </ul>
